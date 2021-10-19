@@ -3,10 +3,8 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./links.css";
 import logo from "../../img/logo/logo.png";
-import { useAuth } from "../../Context/authContext";
 
 const Links = () => {
-  const { user } = useAuth();
   return (
     <div className="home-links">
       <Container>
@@ -21,32 +19,17 @@ const Links = () => {
           </Col>
           <Col className="d-flex flex-column align-items-center justify-content-center ">
             <p className="fs-4 text-secondary">Quick Links</p>
-            <Row>
-              <Col>
-                <Link className="bottom-links mb-3" to="/">
-                  Home
-                </Link>
-              </Col>
-              <Col>
-                <Link className="bottom-links mb-3" to="/programs">
-                  Programs
-                </Link>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Link className="bottom-links" to="/shop">
-                  Shop
-                </Link>
-              </Col>
-              {!user && (
-                <Col>
-                  <Link className="bottom-links" to="/login">
-                    Login
-                  </Link>
-                </Col>
-              )}
-            </Row>
+            <div>
+              <Link className="bottom-links me-3" to="/">
+                Home
+              </Link>
+              <Link className="bottom-links me-3" to="/programs">
+                Programs
+              </Link>
+              <Link className="bottom-links" to="/cart">
+                Cart
+              </Link>
+            </div>
           </Col>
           <Col className="d-flex flex-column align-items-center justify-content-center ">
             <p className="text-muted text-center fs-5 fw-light">

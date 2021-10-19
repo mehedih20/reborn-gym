@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
@@ -6,15 +6,18 @@ import { data } from "./data";
 import "./header.css";
 import { useAuth } from "../../Context/authContext";
 import { getAuth, signOut } from "@firebase/auth";
+import { useCart } from "../../Context/cartContext";
 
 const Header = () => {
   const history = useHistory();
   const { user, setUser } = useAuth();
+  const { setCartList } = useCart();
 
   const handleSignOut = () => {
     const auth = getAuth();
     signOut(auth).then(() => {
       setUser(null);
+      setCartList([]);
     });
   };
 

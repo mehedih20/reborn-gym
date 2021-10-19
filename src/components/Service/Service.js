@@ -27,9 +27,9 @@ const Service = () => {
           <h2 className="display-6 text-success">{name}</h2>
         </Container>
       </div>
-      <Container>
+      <Container className="mb-5 pb-5">
         {item && (
-          <Row md={2} xs={1} className="p-5 mb-5">
+          <Row md={2} xs={1} className="p-5 mb-5 g-4">
             <Col>
               <img src={url} className="img-fluid" alt={name} />
             </Col>
