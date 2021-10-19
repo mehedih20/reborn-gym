@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
@@ -6,11 +6,11 @@ import { data } from "./data";
 import "./header.css";
 import { useAuth } from "../../Context/authContext";
 import { getAuth, signOut } from "@firebase/auth";
-// import logo from "../../img/logo/logo.png";
 
 const Header = () => {
   const history = useHistory();
   const { user, setUser } = useAuth();
+  const [showNav, setShowNav] = useState(false);
 
   const handleSignOut = () => {
     const auth = getAuth();
@@ -20,14 +20,41 @@ const Header = () => {
     });
   };
 
+  const handleToggle = () => {
+    if (window.pageYOffset < 200) {
+      setShowNav(true);
+    }
+    if (window.pageYOffset < 200 && showNav) {
+      setShowNav(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      if (window.pageYOffset >= 200) {
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
+    });
+  }, []);
+
   return (
     <div>
-      <Navbar bg="dark" className="color-bg py-3" variant="dark" expand="lg">
+      <Navbar
+        fixed="top"
+        className={`py-4 ${showNav && "color-bg"}`}
+        variant="dark"
+        expand="lg"
+      >
         <Container>
           <Navbar.Brand as={Link} to="/" className="navigation-brand">
             <span className="text-success">Reborn</span> Gym
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            onClick={handleToggle}
+            aria-controls="basic-navbar-nav"
+          />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {data.map((item, index) => {

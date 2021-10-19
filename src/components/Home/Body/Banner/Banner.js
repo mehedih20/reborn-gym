@@ -10,13 +10,13 @@ const Banner = () => {
         className="d-flex justify-content-between"
       >
         <div className="d-flex flex-column justify-content-center">
-          <h2 className="display-5 fw-light text-light">Let us reborn again</h2>
-          <p className="lead text-secondary mb-3">
+          <h2 className="display-1 fw-light text-light">Let us reborn again</h2>
+          <p className="lead fs-3 text-secondary mb-3">
             With a new version of ourself!
           </p>
-          <p className="display-2 text-light mb-5">
+          {/* <p className="display-6 text-light mb-5">
             <span className="text-success">Reborn</span> Gym
-          </p>
+          </p> */}
           <button className="btn btn-warning align-self-start">
             Explore gym
           </button>

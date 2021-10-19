@@ -13,8 +13,8 @@ export const data = [
     icon: <AiOutlineHome className="me-1 text-success" />,
   },
   {
-    url: "/about",
-    link: "About",
+    url: "/programs",
+    link: "Programs",
     icon: <BiDumbbell className="me-1 text-danger" />,
   },
   {

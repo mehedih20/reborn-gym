@@ -1,0 +1,18 @@
+.home-links {
+  background-color: rgb(17, 17, 17);
+}
+
+.links-title {
+  font-family: "Grechen Fuemen", cursive;
+  font-size: 20px;
+}
+
+.bottom-links {
+  text-decoration: none;
+  color: #d3d3d3;
+  transition: all 0.4s ease;
+}
+
+.bottom-links:hover {
+  color: #1e5128;
+}

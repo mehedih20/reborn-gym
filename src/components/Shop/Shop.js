@@ -2,7 +2,7 @@ import React from "react";
 
 const Shop = () => {
   return (
-    <div>
+    <div style={{ paddingTop: "120px" }}>
       <h1>Shop</h1>
     </div>
   );

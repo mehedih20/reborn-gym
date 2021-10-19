@@ -2,12 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
-import About from "./components/About/About";
 import Shop from "./components/Shop/Shop";
 import Login from "./components/Login/Login";
 import Services from "./components/Services/Services";
 import NotFound from "./components/NotFound/NotFound";
 import Header from "./components/Header/Header";
+import Programs from "./components/Programs/Programs";
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/about">
-          <About />
+        <Route path="/programs">
+          <Programs />
         </Route>
         <Route path="/services">
           <Services />

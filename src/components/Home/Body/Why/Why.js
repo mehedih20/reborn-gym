@@ -24,7 +24,7 @@ const data = [
 
 const Why = () => {
   return (
-    <section class="why">
+    <section className="why">
       <Container>
         <h2 className="section-title">Why Us?</h2>
         <div className="why-container">

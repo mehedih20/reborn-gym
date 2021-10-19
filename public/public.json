@@ -1,0 +1,81 @@
+{
+  "services": [
+    {
+      "name": "Saver Pack",
+      "duration": "1 month",
+      "price": 30,
+      "description": "Saver pack for the quick ones",
+      "url": "https://saruqalhadid.ae/wp-content/uploads/2021/05/tips-to-find-a-good-ladies-gym-saruqalhadid.jpg"
+    },
+    {
+      "name": "Regular Pack",
+      "duration": "1 month",
+      "price": 50,
+      "shower": "Shower facility available",
+      "description": "Reqular pack for the normal individuals",
+      "url": "https://ravefitnessstudio.com/wp-content/uploads/2021/04/Best-abs-exercise.jpg"
+    },
+    {
+      "name": "Regular Pro Pack",
+      "duration": "1 month",
+      "price": 80,
+      "shower": "Shower Facility available",
+      "diet": "Personalized diet plan",
+      "description": "Pro pack for the real pros!",
+      "url": "https://img.freepik.com/free-photo/strong-man-training-gym_1303-23478.jpg?size=626&ext=jpg&ga=GA1.2.220404664.1610236800"
+    },
+    {
+      "name": "Gold pack",
+      "duration": "3 months",
+      "price": 100,
+      "shower": "Shower Facility available",
+      "diet": "Personalized diet plan",
+      "description": "Complete three month training for power users.",
+      "url": "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+      "name": "Platinum pack",
+      "duration": "6 months",
+      "price": 150,
+      "shower": "Shower Facility available",
+      "diet": "Personalized diet plan",
+      "description": "Six month long training for dedicated users.",
+      "url": "https://media.kidadl.com/603714cc2958e0f924b702ac_bodybuilding_is_more_about_endurance_than_about_strength_ef68075607.jpeg"
+    },
+    {
+      "name": "Diamond pack",
+      "duration": "12 months",
+      "price": 200,
+      "shower": "Shower Facility available",
+      "diet": "Personalized diet plan",
+      "description": "Complete one year training for the proffessionals.",
+      "url": "https://i.ytimg.com/vi/gey73xiS8F4/maxresdefault.jpg"
+    }
+  ],
+  "programmes": [
+    {
+      "name": "HIIT",
+      "url": "https://switchplaygroundsa.com/wp-content/uploads/2019/03/Switch-Playground-Cherell-1080x675.jpg"
+    },
+    {
+      "name": "Lower body workout",
+      "url": "https://www.nautilusplus.com/content/uploads/2020/06/fente-1024x672.png"
+    },
+    {
+      "name": "Upper body workout",
+      "url": "https://onnitacademy.imgix.net/2016/06/muscle-1440x900.jpg"
+    },
+    {
+      "name": "Abs workout",
+      "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/701/ways-training-abs-improves-life-main-1518562220.jpg"
+    },
+    {
+      "name": "Yoga",
+      "url": "https://imagens.brasil.elpais.com/resizer/xDX7Qs4FqjTYDBneVi8IRVABPJ0=/414x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/2U3GFCKYAFCXFKTSTRCIBUXTGI.jpg"
+    },
+    {
+      "name": "Martial arts",
+      "url": "https://www.martialtribes.com/wp-content/uploads/2018/07/martial-arts.jpg"
+    }
+  ]
+}
