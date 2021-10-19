@@ -10,7 +10,6 @@ import { getAuth, signOut } from "@firebase/auth";
 const Header = () => {
   const history = useHistory();
   const { user, setUser } = useAuth();
-  const [showNav, setShowNav] = useState(false);
 
   const handleSignOut = () => {
     const auth = getAuth();
@@ -19,41 +18,14 @@ const Header = () => {
     });
   };
 
-  const handleToggle = () => {
-    if (window.pageYOffset < 50) {
-      setShowNav(true);
-    }
-    if (window.pageYOffset < 50 && showNav) {
-      setShowNav(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      if (window.pageYOffset >= 50) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
-    });
-  }, []);
-
   return (
     <div>
-      <Navbar
-        fixed="top"
-        className={`py-4 ${showNav && "color-bg"}`}
-        variant="dark"
-        expand="lg"
-      >
+      <Navbar className="py-4 color-bg" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/" className="navigation-brand">
             <span className="text-success">Reborn</span> Gym
           </Navbar.Brand>
-          <Navbar.Toggle
-            onClick={handleToggle}
-            aria-controls="basic-navbar-nav"
-          />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {data.map((item, index) => {

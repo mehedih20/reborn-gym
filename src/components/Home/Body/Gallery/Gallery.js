@@ -40,7 +40,7 @@ const Gallery = () => {
       <h2 className="section-title">Gallery</h2>
       <Container>
         <Carousel
-          className=" mx-auto gallery-carousel"
+          className="mx-auto gallery-carousel"
           activeIndex={index}
           onSelect={handleSelect}
         >

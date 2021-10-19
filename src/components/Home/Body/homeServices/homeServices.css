@@ -10,19 +10,7 @@
   background-position: center;
   background-attachment: fixed;
   padding: 200px 0;
-  clip-path: polygon(0 7%, 100% 0, 100% 93%, 0% 100%);
-}
-
-@media (max-width: 1200px) {
-  .home-services {
-    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
-  }
-}
-@media (max-width: 775px) {
-  .home-services {
-    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
-    padding: 150px 0;
-  }
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
 
 .home-services-container {

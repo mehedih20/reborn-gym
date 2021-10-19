@@ -4,11 +4,11 @@
 
 .gallery-carousel {
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.3);
-  width: 50%;
+  width: 65%;
 }
 
 .carousel-img {
-  height: 350px;
+  height: 450px;
 }
 
 @media (max-width: 995px) {
