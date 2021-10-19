@@ -1,26 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { Container, Button } from "react-bootstrap";
 import { FcCheckmark } from "react-icons/fc";
+import { useHistory } from "react-router";
+import { useCart } from "../../../../Context/cartContext";
 import "./homeServices.css";
 
 const HomeServices = () => {
-  const [list, setList] = useState([]);
-  useEffect(() => {
-    fetch("./public.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setList(data.services);
-      });
-  }, []);
+  const { services } = useCart();
+  const history = useHistory();
+
+  const handleClick = (id) => {
+    history.push(`/service/${id}`);
+  };
 
   return (
-    <div className="home-services">
+    <div className="home-services" id="home-services">
       <Container>
         <h2 className="section-title">Services</h2>
         <div className="home-services-container mt-5">
-          {list.map((item, index) => {
-            const { name, duration, shower, diet, description, price, url } =
-              item;
+          {services.map((item, index) => {
+            const {
+              id,
+              name,
+              duration,
+              shower,
+              diet,
+              description,
+              price,
+              url,
+            } = item;
             return (
               <div key={index} className="home-services-box">
                 <div className="services-img">
@@ -40,7 +48,11 @@ const HomeServices = () => {
                   </p>
                 )}
                 <p className="text-muted">{description}</p>
-                <Button className="mt-auto" variant="warning">
+                <Button
+                  onClick={() => handleClick(id)}
+                  className="mt-auto"
+                  variant="warning"
+                >
                   Show more
                 </Button>
               </div>

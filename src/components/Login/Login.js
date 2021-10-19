@@ -3,6 +3,7 @@ import { Container, Button } from "react-bootstrap";
 import { useAuth } from "../../Context/authContext";
 import { FcGoogle } from "react-icons/fc";
 import "./login.css";
+import { useHistory, useLocation } from "react-router";
 
 const Login = () => {
   const {
@@ -13,11 +14,16 @@ const Login = () => {
     isLoading,
     setIsLoading,
     googleSignIn,
+    setUser,
   } = useAuth();
   const [isUser, setIsUser] = useState(false);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
+  const location = useLocation();
+
+  let { from } = location.state || { from: { pathname: "/" } };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +32,20 @@ const Login = () => {
       return;
     } else {
       if (isUser && email && password) {
-        emailLogin(email, password);
+        emailLogin(email, password)
+          .then((result) => {
+            const person = result.user;
+            setIsLoading(false);
+            if (person.emailVerified) {
+              setUser(person);
+              history.push(from);
+            } else {
+              setFormMsg("Please verify your email!");
+            }
+          })
+          .catch((error) => {
+            setFormMsg(error.message);
+          });
       } else if (!isUser && email && password) {
         createNewUser(email, password, username);
       }
@@ -46,7 +65,13 @@ const Login = () => {
   };
 
   const handleGoogleSignIn = () => {
-    googleSignIn();
+    googleSignIn()
+      .then((result) => {
+        const person = result.user;
+        setUser(person);
+        history.push(from);
+      })
+      .catch((error) => setFormMsg(error.message));
   };
 
   return (

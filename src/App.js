@@ -4,10 +4,11 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
 import Login from "./components/Login/Login";
-import Services from "./components/Services/Services";
+import Service from "./components/Services/Service";
 import NotFound from "./components/NotFound/NotFound";
 import Header from "./components/Header/Header";
 import Programs from "./components/Programs/Programs";
+import PrivateRoute from "./Private/PrivateRoute";
 
 function App() {
   return (
@@ -17,15 +18,15 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/programs">
+        <PrivateRoute path="/programs">
           <Programs />
-        </Route>
-        <Route path="/services">
-          <Services />
-        </Route>
-        <Route path="/shop">
+        </PrivateRoute>
+        <PrivateRoute path="/service/:id">
+          <Service />
+        </PrivateRoute>
+        <PrivateRoute path="/shop">
           <Shop />
-        </Route>
+        </PrivateRoute>
         <Route path="/login">
           <Login />
         </Route>

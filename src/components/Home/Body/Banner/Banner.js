@@ -14,10 +14,7 @@ const Banner = () => {
           <p className="lead fs-3 text-secondary mb-3">
             With a new version of ourself!
           </p>
-          {/* <p className="display-6 text-light mb-5">
-            <span className="text-success">Reborn</span> Gym
-          </p> */}
-          <button className="btn btn-warning align-self-start">
+          <button className="btn btn-warning align-self-start animate">
             Explore gym
           </button>
         </div>

@@ -2,13 +2,13 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./links.css";
-import logo from "../../../img/logo/logo.png";
+import logo from "../../img/logo/logo.png";
 
 const Links = () => {
   return (
     <div className="home-links">
       <Container>
-        <Row className="text-light" xs={1} md={2} lg={3} className="g-4">
+        <Row className="text-light g-4" xs={1} md={2} lg={3}>
           <Col className="d-flex flex-column align-items-center">
             <div className="links-logo">
               <img src={logo} width="100px" alt="logo" />
@@ -21,13 +21,13 @@ const Links = () => {
             <p className="fs-4 text-secondary">Quick Links</p>
             <Row>
               <Col>
-                <Link className="bottom-links mb-3" to="/about">
-                  About
+                <Link className="bottom-links mb-3" to="/">
+                  Home
                 </Link>
               </Col>
               <Col>
-                <Link className="bottom-links mb-3" to="/services">
-                  Services
+                <Link className="bottom-links mb-3" to="/programs">
+                  Programs
                 </Link>
               </Col>
             </Row>

@@ -4,7 +4,7 @@ import {
   AiOutlineUnorderedList,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { BiDumbbell, BiLogIn } from "react-icons/bi";
+import { BiDumbbell } from "react-icons/bi";
 
 export const data = [
   {
@@ -17,14 +17,10 @@ export const data = [
     link: "Programs",
     icon: <BiDumbbell className="me-1 text-danger" />,
   },
-  {
-    url: "/services",
-    link: "Services",
-    icon: <AiOutlineUnorderedList className="me-1 text-info" />,
-  },
+
   {
     url: "/shop",
-    link: "Shop",
+    link: "Cart",
     icon: <AiOutlineShoppingCart className="me-1 text-warning" />,
   },
 ];

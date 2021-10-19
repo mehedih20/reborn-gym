@@ -21,17 +21,17 @@ const Header = () => {
   };
 
   const handleToggle = () => {
-    if (window.pageYOffset < 200) {
+    if (window.pageYOffset < 50) {
       setShowNav(true);
     }
-    if (window.pageYOffset < 200 && showNav) {
+    if (window.pageYOffset < 50 && showNav) {
       setShowNav(false);
     }
   };
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      if (window.pageYOffset >= 200) {
+      if (window.pageYOffset >= 50) {
         setShowNav(true);
       } else {
         setShowNav(false);

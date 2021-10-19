@@ -1,6 +1,7 @@
 {
   "services": [
     {
+      "id": 1,
       "name": "Saver Pack",
       "duration": "1 month",
       "price": 30,
@@ -8,6 +9,7 @@
       "url": "https://saruqalhadid.ae/wp-content/uploads/2021/05/tips-to-find-a-good-ladies-gym-saruqalhadid.jpg"
     },
     {
+      "id": 2,
       "name": "Regular Pack",
       "duration": "1 month",
       "price": 50,
@@ -16,6 +18,7 @@
       "url": "https://ravefitnessstudio.com/wp-content/uploads/2021/04/Best-abs-exercise.jpg"
     },
     {
+      "id": 3,
       "name": "Regular Pro Pack",
       "duration": "1 month",
       "price": 80,
@@ -25,6 +28,7 @@
       "url": "https://img.freepik.com/free-photo/strong-man-training-gym_1303-23478.jpg?size=626&ext=jpg&ga=GA1.2.220404664.1610236800"
     },
     {
+      "id": 4,
       "name": "Gold pack",
       "duration": "3 months",
       "price": 100,
@@ -34,6 +38,7 @@
       "url": "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
+      "id": 5,
       "name": "Platinum pack",
       "duration": "6 months",
       "price": 150,
@@ -43,6 +48,7 @@
       "url": "https://media.kidadl.com/603714cc2958e0f924b702ac_bodybuilding_is_more_about_endurance_than_about_strength_ef68075607.jpeg"
     },
     {
+      "id": 6,
       "name": "Diamond pack",
       "duration": "12 months",
       "price": 200,
@@ -55,26 +61,32 @@
   "programmes": [
     {
       "name": "HIIT",
+      "description": "HIIT (high-intensity interval training) is a form of exercise that has been proven to boost metabolism and build strength, packing in the same benefits of lower and moderate-intensity aerobic workouts in a much shorter time.",
       "url": "https://switchplaygroundsa.com/wp-content/uploads/2019/03/Switch-Playground-Cherell-1080x675.jpg"
     },
     {
       "name": "Lower body workout",
+      "description": "Humans are bipedal, performing most tasks and sports on two legs, and many upper body movements are coordinated with and driven by the lower body",
       "url": "https://www.nautilusplus.com/content/uploads/2020/06/fente-1024x672.png"
     },
     {
       "name": "Upper body workout",
+      "description": "Building strength in your upper body not only makes daily tasks easier to perform, but it also helps to ward off osteoporosis and improves posture.",
       "url": "https://onnitacademy.imgix.net/2016/06/muscle-1440x900.jpg"
     },
     {
       "name": "Abs workout",
+      "description": "Abdominal muscles help stabilize your core.They also assist your breathing, allow movement, protect your internal organs and are in charge of postural support and balance.",
       "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/701/ways-training-abs-improves-life-main-1518562220.jpg"
     },
     {
       "name": "Yoga",
+      "description": "Keeping our mental health ‘healthy’ can be a bit of a beast to deal with and can often feel like a continuous uphill battle. For many of us, staying above water requires daily work and intentional practices. Here’s where yoga enters the conversation. ",
       "url": "https://imagens.brasil.elpais.com/resizer/xDX7Qs4FqjTYDBneVi8IRVABPJ0=/414x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/2U3GFCKYAFCXFKTSTRCIBUXTGI.jpg"
     },
     {
       "name": "Martial arts",
+      "description": "For many people, martial arts is an integral part of life. People practice martial arts as a sport, a hobby, an artistic expression or a regimen for physical, mental and emotional well-being. Skills learned in the study of martial arts can be applied in other aspects and relationships in life.",
       "url": "https://www.martialtribes.com/wp-content/uploads/2018/07/martial-arts.jpg"
     }
   ]

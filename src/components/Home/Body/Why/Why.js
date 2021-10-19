@@ -24,7 +24,7 @@ const data = [
 
 const Why = () => {
   return (
-    <section className="why">
+    <div className="section-why" id="why">
       <Container>
         <h2 className="section-title">Why Us?</h2>
         <div className="why-container">
@@ -39,7 +39,7 @@ const Why = () => {
           })}
         </div>
       </Container>
-    </section>
+    </div>
   );
 };
 

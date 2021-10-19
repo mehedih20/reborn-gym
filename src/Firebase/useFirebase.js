@@ -14,6 +14,7 @@ import initializeAuthentication from "./firebase-init";
 initializeAuthentication();
 
 const useFirebase = () => {
+  const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   const [formMsg, setFormMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -21,12 +22,7 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
 
   const googleSignIn = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const person = result.user;
-        setUser(person);
-      })
-      .catch((error) => setFormMsg(error.message));
+    return signInWithPopup(auth, googleProvider);
   };
 
   const createNewUser = (email, password, username) => {
@@ -46,19 +42,7 @@ const useFirebase = () => {
   };
 
   const emailLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        const person = result.user;
-        setIsLoading(false);
-        if (person.emailVerified) {
-          setUser(person);
-        } else {
-          setFormMsg("Please verify your email!");
-        }
-      })
-      .catch((error) => {
-        setFormMsg(error.message);
-      });
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   useEffect(() => {
@@ -68,6 +52,7 @@ const useFirebase = () => {
           setUser(user);
         }
       }
+      setLoading(false);
     });
     return () => unsubscribe;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -83,6 +68,8 @@ const useFirebase = () => {
     isLoading,
     setIsLoading,
     googleSignIn,
+    loading,
+    setLoading,
   };
 };
 
