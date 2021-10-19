@@ -16,7 +16,6 @@ const Header = () => {
     const auth = getAuth();
     signOut(auth).then(() => {
       setUser(null);
-      console.log("Logout Successfull");
     });
   };
 

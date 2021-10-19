@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { useAuth } from "./authContext";
 
 const CartContext = createContext();
 
@@ -14,7 +15,6 @@ const getLocalCart = () => {
 const CartProvider = ({ children }) => {
   const [services, setServices] = useState([]);
   const [cartList, setCartList] = useState(getLocalCart());
-  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     fetch("./public.json")
@@ -28,7 +28,7 @@ const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cartList, setCartList, services, setServices, total, setTotal }}
+      value={{ cartList, setCartList, services, setServices }}
     >
       {children}
     </CartContext.Provider>

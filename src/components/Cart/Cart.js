@@ -4,7 +4,7 @@ import { useCart } from "../../Context/cartContext";
 import { IoTrashBinSharp } from "react-icons/io5";
 import Links from "../Common/Links";
 
-const Shop = () => {
+const Cart = () => {
   const { cartList, setCartList } = useCart();
   const cartMonney = cartList.map((item) => item.price);
   const total = cartMonney.reduce((a, b) => a + b, 0);
@@ -21,7 +21,7 @@ const Shop = () => {
   };
 
   return (
-    <div style={{ paddingTop: "100px" }}>
+    <div style={{ paddingTop: "120px" }}>
       <div className="py-5 bg-dark">
         <Container>
           <h2 className="display-6 text-success">
@@ -78,4 +78,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Cart;

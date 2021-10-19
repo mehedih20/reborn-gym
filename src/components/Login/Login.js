@@ -45,6 +45,7 @@ const Login = () => {
           })
           .catch((error) => {
             setFormMsg(error.message);
+            setIsLoading(false);
           });
       } else if (!isUser && email && password) {
         createNewUser(email, password, username);

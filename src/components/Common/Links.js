@@ -3,8 +3,10 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./links.css";
 import logo from "../../img/logo/logo.png";
+import { useAuth } from "../../Context/authContext";
 
 const Links = () => {
+  const { user } = useAuth();
   return (
     <div className="home-links">
       <Container>
@@ -37,11 +39,13 @@ const Links = () => {
                   Shop
                 </Link>
               </Col>
-              <Col>
-                <Link className="bottom-links" to="/login">
-                  Login
-                </Link>
-              </Col>
+              {!user && (
+                <Col>
+                  <Link className="bottom-links" to="/login">
+                    Login
+                  </Link>
+                </Col>
+              )}
             </Row>
           </Col>
           <Col className="d-flex flex-column align-items-center justify-content-center ">

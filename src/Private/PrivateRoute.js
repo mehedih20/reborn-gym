@@ -5,11 +5,13 @@ import "./privateRoute.css";
 
 function PrivateRoute({ children, ...rest }) {
   let { user, loading } = useAuth();
+
   if (loading) {
     return (
       <Spinner animation="border" className="gym-spinner" variant="danger" />
     );
   }
+
   return (
     <Route
       {...rest}
