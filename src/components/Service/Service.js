@@ -17,7 +17,7 @@ const Service = () => {
   const handleAdd = () => {
     const list = [...cartList, item];
     setCartList(list);
-    history.push("/shop");
+    history.push("/cart");
   };
 
   return (

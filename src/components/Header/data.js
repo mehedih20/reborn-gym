@@ -19,7 +19,7 @@ export const data = [
   },
 
   {
-    url: "/shop",
+    url: "/cart",
     link: "Cart",
     icon: <AiOutlineShoppingCart className="me-1 text-warning" />,
   },
