@@ -1,0 +1,18 @@
+.navigation-brand {
+  font-family: "Grechen Fuemen", cursive;
+  font-size: 25px;
+}
+
+.navigation-link {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.navigation-btn {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}

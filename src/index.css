@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Patrick+Hand&family=Share+Tech+Mono&display=swap");
+
+/* font-family: "Patrick Hand", cursive;
+ font-family: "Grechen Fuemen", cursive;
+  font-family: "Share Tech Mono", monospace;
+*/
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.color-bg {
+  background-color: #000000 !important;
+}
+
+.section-title {
+  text-align: center;
+  font-family: "Grechen Fuemen", cursive;
+  font-size: 35px;
+  color: #406343;
+  margin-bottom: 30px;
+}
+
+footer {
+  margin-top: auto;
 }
