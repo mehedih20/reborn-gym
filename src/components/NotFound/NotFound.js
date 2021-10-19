@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div style={{ paddingTop: "120px" }}>
+    <div>
       <div className="py-5 bg-dark">
         <Container>
           <h2 className="display-6 text-success">

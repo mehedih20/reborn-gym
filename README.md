@@ -5,3 +5,5 @@
 - Gym app
 - Your selective gym services
 - Get to know about different workout programmes
+- Buy services online
+- User Authenticated site
